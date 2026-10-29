@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Work For Home Uganda | Online Jobs</title>
+
+<meta name="description" content="Explore online work categories including data entry, writing, virtual assistance, design, customer support and more with Work For Home Uganda.">
+
+<style>
+:root {
+    --green: #087f3e;
+    --dark-green: #065b2d;
+    --light-green: #e9f8ee;
+    --yellow: #ffca28;
+    --white: #ffffff;
+    --dark: #183328;
+    --grey: #64748b;
+    --background: #f5faf6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--white);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 12px #0000000c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--green);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #d89a00;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-button {
+    background: var(--green);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 7px;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #075b30, #0c9c50);
+    color: white;
+    text-align: center;
+    padding: 75px 20px 65px;
+}
+
+.hero-label {
+    display: inline-block;
+    background: #ffffff20;
+    border: 1px solid #ffffff50;
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.hero h1 span {
+    color: var(--yellow);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #e4f8e9;
+    font-size: 17px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--yellow);
+    color: #17351f;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    display: inline-block;
+    color: white;
+    border: 1px solid #ffffff90;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-left: 8px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 60px 6%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--grey);
+    max-width: 650px;
+    margin: auto;
+}
+
+.highlight {
+    color: var(--green);
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 850px;
+    margin: -1px auto 0;
+    padding: 28px 20px;
+    background: white;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 5px 25px #00000008;
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    color: var(--green);
+    font-size: 27px;
+}
+
+.stat span {
+    color: var(--grey);
+    font-size: 13px;
+}
+
+/* SEARCH */
+
+.jobs-section {
+    background: var(--background);
+}
+
+.search-box {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d5e4d9;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+}
+
+.search-box input:focus {
+    border-color: var(--green);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: white;
+    border: 1px solid #d8e7dc;
+    color: var(--dark);
+    padding: 8px 13px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--green);
+    color: white;
+    border-color: var(--green);
+}
+
+/* JOB CARDS */
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.job-card {
+    background: white;
+    padding: 23px;
+    border: 1px solid #e4eee6;
+    border-radius: 14px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px #0000000b;
+}
+
+.job-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background: var(--light-green);
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.job-card h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.job-card p {
+    font-size: 14px;
+    color: var(--grey);
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.category-tag {
+    display: inline-block;
+    font-size: 11px;
+    background: #f0f5f1;
+    color: #386148;
+    padding: 5px 9px;
+    border-radius: 20px;
+    margin-bottom: 13px;
+}
+
+.job-button {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background: var(--green);
+    color: white;
+    padding: 11px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.job-button:hover {
+    background: var(--dark-green);
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    color: var(--grey);
+    padding: 30px;
+    grid-column: 1 / -1;
+}
+
+/* HOW IT WORKS */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    padding: 25px 18px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5eee7;
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: var(--green);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.step h3 {
+    margin-bottom: 8px;
+}
+
+.step p {
+    font-size: 14px;
+    color: var(--grey);
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    color: var(--grey);
+    margin: 15px 0;
+}
+
+/* WARNING */
+
+.notice {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff8df;
+    border-left: 5px solid #e4ad13;
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: #634c09;
+}
+
+/* FAQ */
+
+.faq-list {
+    max-width: 800px;
+    margin: auto;
+}
+
+details {
+    background: white;
+    border: 1px solid #e2ece4;
+    padding: 17px;
+    margin-bottom: 12px;
+    border-radius: 9px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+details p {
+    color: var(--grey);
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* CTA */
+
+.cta {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.cta h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    margin: 0 auto 24px;
+    max-width: 600px;
+    color: #e0f4e6;
+}
+
+/* FOOTER */
+
+footer {
+    background: #103322;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #c5d9cc;
+    margin: 7px 0;
+}
+
+footer a {
+    color: var(--yellow);
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    .jobs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 560px) {
+    header {
+        padding: 13px 4%;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        margin: 0 5%;
+        padding: 20px 8px;
+    }
+
+    .stat strong {
+        font-size: 21px;
+    }
+
+    .stat span {
+        font-size: 11px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .button-outline {
+        margin: 12px 0 0;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+    <a class="logo" href="#home">
+        Work For Home <span>Uganda</span>
+    </a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#jobs">Job Categories</a>
+        <a href="#about">About</a>
+        <a href="#register" class="nav-button">Register</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="hero-label">
+        🇺🇬 Your Online Work Community
+    </div>
+
+    <h1>
+        Discover Your Next <span>Online Opportunity</span>
+    </h1>
+
+    <p>
+        Explore online work categories, discover opportunities
+        that match your skills, and take the next step toward
+        building your digital career.
+    </p>
+
+    <a href="#jobs" class="button">Explore Categories →</a>
+
+    <a href="#about" class="button-outline">Learn More</a>
+</section>
+
+<!-- STATS -->
+
+<div class="stats">
+    <div class="stat">
+        <strong>14</strong>
+        <span>Job Categories</span>
+    </div>
+
+    <div class="stat">
+        <strong>Online</strong>
+        <span>Work Opportunities</span>
+    </div>
+
+    <div class="stat">
+        <strong>Uganda</strong>
+        <span>Our Community</span>
+    </div>
+</div>
+
+<!-- JOB CATEGORIES -->
+
+<section class="jobs-section" id="jobs">
+
+    <div class="section-heading">
+        <h2>Explore <span class="highlight">Job Categories</span></h2>
+
+        <p>
+            Find a category that matches your interests and skills.
+            Search below to discover the available categories.
+        </p>
+    </div>
+
+    <div class="search-box">
+        <input
+            type="search"
+            id="jobSearch"
+            placeholder="🔍 Search jobs, e.g. data entry..."
+            aria-label="Search job categories"
+        >
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Categories</button>
+        <button class="filter-btn" data-filter="writing">Writing</button>
+        <button class="filter-btn" data-filter="business">Business</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="trading">Trading</button>
+        <button class="filter-btn" data-filter="support">Support</button>
+        <button class="filter-btn" data-filter="other">Other</button>
+    </div>
+
+    <div class="jobs-grid" id="jobsGrid">
+
+        <!-- 1. DATA ENTRY -->
+        <article class="job-card" data-category="business">
+            <div class="job-icon">📝</div>
+            <span class="category-tag">Administration</span>
+            <h3>Data Entry</h3>
+            <p>
+                Learn about tasks involving entering, organizing
+                and updating information in digital systems.
+            </p>
+            <a class="job-button register-link" data-job="Data Entry" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 2. LETTER WRITING -->
+        <article class="job-card" data-category="writing">
+            <div class="job-icon">💌</div>
+            <span class="category-tag">Writing</span>
+            <h3>Letter Writing</h3>
+            <p>
+                Explore writing formal letters, applications,
+                business correspondence and personal messages.
+            </p>
+            <a class="job-button register-link" data-job="Letter Writing" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 3. ONLINE CHATTING -->
+        <article class="job-card" data-category="support">
+            <div class="job-icon">💬</div>
+            <span class="category-tag">Communication</span>
+            <h3>Online Chatting</h3>
+            <p>
+                Explore legitimate online chat support and
+                customer communication opportunities.
+            </p>
+            <a class="job-button register-link" data-job="Online Chatting" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 4. VIRTUAL ASSISTANT -->
+        <article class="job-card" data-category="business">
+            <div class="job-icon">💻</div>
+            <span class="category-tag">Administration</span>
+            <h3>Virtual Assistant</h3>
+            <p>
+                Discover remote administrative tasks such as
+                scheduling, organizing files and managing emails.
+            </p>
+            <a class="job-button register-link" data-job="Virtual Assistant" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 5. FOREX TRADING -->
+        <article class="job-card" data-category="trading">
+            <div class="job-icon">📈</div>
+            <span class="category-tag">Financial Markets</span>
+            <h3>Forex Trading</h3>
+            <p>
+                Explore forex education, market analysis and
+                trading skills. Trading can result in financial losses.
+            </p>
+            <a class="job-button register-link" data-job="Forex Trading" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 6. CRYPTO TRADING -->
+        <article class="job-card" data-category="trading">
+            <div class="job-icon">₿</div>
+            <span class="category-tag">Digital Assets</span>
+            <h3>Crypto Trading</h3>
+            <p>
+                Learn about cryptocurrency markets and trading
+                education. Prices can change rapidly and losses are possible.
+            </p>
+            <a class="job-button register-link" data-job="Crypto Trading" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 7. CONTENT WRITING -->
+        <article class="job-card" data-category="writing">
+            <div class="job-icon">✍️</div>
+            <span class="category-tag">Writing</span>
+            <h3>Content Writing</h3>
+            <p>
+                Explore writing articles, blog posts, website
+                content, product descriptions and other material.
+            </p>
+            <a class="job-button register-link" data-job="Content Writing" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 8. CUSTOMER SUPPORT -->
+        <article class="job-card" data-category="support">
+            <div class="job-icon">🎧</div>
+            <span class="category-tag">Customer Service</span>
+            <h3>Customer Support</h3>
+            <p>
+                Discover remote customer service tasks involving
+                answering questions and helping customers.
+            </p>
+            <a class="job-button register-link" data-job="Customer Support" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 9. MARKETING PRODUCTS -->
+        <article class="job-card" data-category="business">
+            <div class="job-icon">📢</div>
+            <span class="category-tag">Marketing</span>
+            <h3>Marketing Products</h3>
+            <p>
+                Explore product promotion, social media marketing
+                and legitimate affiliate marketing opportunities.
+            </p>
+            <a class="job-button register-link" data-job="Marketing Products" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 10. POSTER DESIGNING -->
+        <article class="job-card" data-category="design">
+            <div class="job-icon">🎨</div>
+            <span class="category-tag">Graphic Design</span>
+            <h3>Poster Designing</h3>
+            <p>
+                Explore designing promotional posters, event
+                graphics, advertisements and social media artwork.
+            </p>
+            <a class="job-button register-link" data-job="Poster Designing" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 11. LOGO DESIGNING -->
+        <article class="job-card" data-category="design">
+            <div class="job-icon">🖌️</div>
+            <span class="category-tag">Graphic Design</span>
+            <h3>Logo Designing</h3>
+            <p>
+                Discover logo creation, brand identity design
+                and visual design opportunities.
+            </p>
+            <a class="job-button register-link" data-job="Logo Designing" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 12. MAKING SURVEYS -->
+        <article class="job-card" data-category="business">
+            <div class="job-icon">📊</div>
+            <span class="category-tag">Research</span>
+            <h3>Making Surveys</h3>
+            <p>
+                Explore creating questionnaires, collecting
+                feedback and participating in legitimate research surveys.
+            </p>
+            <a class="job-button register-link" data-job="Making Surveys" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 13. WRITING SONGS -->
+        <article class="job-card" data-category="writing">
+            <div class="job-icon">🎵</div>
+            <span class="category-tag">Creative Work</span>
+            <h3>Writing Songs</h3>
+            <p>
+                Explore songwriting, lyric writing, creative
+                writing and music-related projects.
+            </p>
+            <a class="job-button register-link" data-job="Writing Songs" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <!-- 14. OTHER ONLINE JOBS -->
+        <article class="job-card" data-category="other">
+            <div class="job-icon">🌟</div>
+            <span class="category-tag">Other Opportunities</span>
+            <h3>Other Online Jobs</h3>
+            <p>
+                Explore other legitimate remote work categories
+                that match your experience, interests and skills.
+            </p>
+            <a class="job-button register-link" data-job="Other Online Jobs" href="#register">
+                Explore Category →
+            </a>
+        </article>
+
+        <div class="no-results" id="noResults">
+            <h3>No matching category found.</h3>
+            <p>Try a different search term or select another category.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section id="how-it-works">
+    <div class="section-heading">
+        <h2>How It <span class="highlight">Works</span></h2>
+        <p>Follow these steps to get started.</p>
+    </div>
+
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Choose a Category</h3>
+            <p>
+                Explore the 14 categories and choose one
+                that interests you.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Register</h3>
+            <p>
+                Complete the registration form with accurate
+                contact information.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Explore Opportunities</h3>
+            <p>
+                Look for verified opportunities and check
+                their requirements before applying.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- REGISTRATION -->
+
+<section class="cta" id="register">
+    <h2>Ready to Get Started?</h2>
+
+  
